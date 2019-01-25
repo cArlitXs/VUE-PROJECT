@@ -1,5 +1,5 @@
 module.exports = {
   devServer: {
-    proxy: 'localhost/vue-collection'
+    proxy: 'localhost/scrum3-vuemw'
   }
 }
