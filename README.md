@@ -20,10 +20,10 @@ npm run serve
 
 ## Dev server access
 
-- API: http://localhost/REPO_FOLDER/api
+- API: http://localhost/scrum3-vuemw/api
 - Client: http://localhost:8080
 
 ## Production Server access (Heroku)
 
-- API: http://APP_NAME.herokuapp.com/api
-- Client: http://APP_NAME.herokuapp.com/dist
+- API: http://s4t5.herokuapp.com/api
+- Client: http://s4t5.herokuapp.com/dist
