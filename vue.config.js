@@ -1,6 +1,6 @@
 module.exports = {
   publicPath: './',
   devServer: {
-    proxy: 'localhost/scrum3-vuemw'
+    proxy: 'http://localhost/scrum3-vuemw'
   }
 }
