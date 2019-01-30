@@ -2,7 +2,7 @@ module.exports = {
   devServer: {
     proxy: {
       '^/api': {
-        target: 'http://localhost/vue-collection',
+        target: 'http://localhost/scrum3-vuemw',
       },
       '/': {
         target: 'http://localhost',
