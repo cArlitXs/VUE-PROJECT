@@ -18,7 +18,7 @@
        - videogames
        - music albums
 
-         This component should display the right component for each collection type. E.g. if it is a "books" collection, the component "items-books" must be displayed, showing the books in the appropriate format; if it is a "movies" collection, the component "items-movies" must be displayed, showing the movies in the appropriate format. 
+         This component should display the right component for each collection type. E.g. if it is a "books" collection, the component "items-books" must be displayed, showing the books in the appropriate format; if it is a "movies" collection, the component "items-movies" must be displayed, showing the movies in the appropriate format.
 
          https://vuejs.org/v2/guide/conditional.html
 
@@ -35,7 +35,6 @@
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
-    <!-- TODO -->
 
   </div>
 
