@@ -1,6 +1,13 @@
 module.exports = {
-  publicPath: './',
   devServer: {
-    proxy: 'http://localhost/scrum3-vuemw'
+    proxy: {
+      '^/api': {
+        target: 'http://localhost/vue-collection',
+      },
+      '/': {
+        target: 'http://localhost',
+      }
+
+    }
   }
 }
