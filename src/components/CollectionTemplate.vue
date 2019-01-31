@@ -8,6 +8,12 @@
 
   <div>
     <h3>Template component</h3>
+
+    <div v-for="item in template.data">
+      <label>
+      {{item.prompt}}
+    </label>
+    </div>
   </div>
 
 </template>
