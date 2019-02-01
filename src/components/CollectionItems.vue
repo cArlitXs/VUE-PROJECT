@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <!-- Inside this component you should display the collection.items object available in the 'collection' prop.
 
          This component will display a basic 'item' container for each item in the collection.items array. It will display:
