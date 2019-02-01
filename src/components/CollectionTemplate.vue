@@ -6,7 +6,7 @@
 
   <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
 
-  <div>
+  <div class="container">
     <h3>Template component</h3>
 
     <div v-for="item in template.data">
