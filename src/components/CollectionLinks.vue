@@ -14,7 +14,7 @@
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
 
     <h3>Links component</h3>
-    <!-- TODO -->
+    <!-- TODO --> 
   </div>
 
 </template>
@@ -26,6 +26,7 @@
    /* https://vuejs.org/v2/guide/components.html#Dynamic-Props*/
    props: [
      // This prop stores the collection.links array
+     //Que solo aparecen los enlaces de tipo collection
      'links'
    ],
    data: function() {

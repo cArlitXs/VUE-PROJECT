@@ -8,6 +8,7 @@
 
   <div>
     <h3>Template component</h3>
+    
   </div>
 
 </template>
