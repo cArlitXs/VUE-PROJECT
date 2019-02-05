@@ -59,6 +59,10 @@
  import EditForm from './EditForm';
  // TODO: import components for the 5 item types
  import MoviesComponent from './MoviesComponent';
+ import BookComponent from './BookComponent';
+ import TVSeriesComponent from './TVSeriesComponent';
+ import MusicComponent from './MusicComponent';
+ import VideoGameComponent from './VideoGameComponent';
 
  export default {
    name: 'CollectionItems',
@@ -71,7 +75,12 @@
      }
    },
    components: {
-     EditForm
+     EditForm,
+     MoviesComponent,
+     BookComponent,
+     TVSeriesComponent,
+     MusicComponent,
+     VideoGameComponent
      // TODO: add custom components for each of the four item categories
    },
    methods: {
