@@ -36,8 +36,21 @@
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
 
+    <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
+      <div>
+        <MoviesComponent v-if="collection.type=='movie'"></MoviesComponent>
+        <BookComponent v-if="collection.type=='books'"></BookComponent>
+        <TVSeriesComponent v-if="collection.type=='tvseries'"></TVSeriesComponent>
+        <MusicComponent v-if="collection.type=='music'"></MusicComponent>
+        <VideoGameComponent v-if="collection.type=='VideoGame'"></VideoGameComponent>
+      </div>
+      <button v-on:click="borrar(item)" disabled>Borrar</button>
+      <button v-on:click="processLink(item, $event)">Enlace</button>
+      <div>
+        <EditForm :template="data" :item="item"></EditForm>
+      </div>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -45,6 +58,11 @@
  // Import components
  import EditForm from './EditForm';
  // TODO: import components for the 5 item types
+ import MoviesComponent from './MoviesComponent';
+ import BookComponent from './BookComponent';
+ import TVSeriesComponent from './TVSeriesComponent';
+ import MusicComponent from './MusicComponent';
+ import VideoGameComponent from './VideoGameComponent';
 
  export default {
    name: 'CollectionItems',
@@ -57,7 +75,12 @@
      }
    },
    components: {
-     EditForm
+     EditForm,
+     MoviesComponent,
+     BookComponent,
+     TVSeriesComponent,
+     MusicComponent,
+     VideoGameComponent
      // TODO: add custom components for each of the four item categories
    },
    methods: {
