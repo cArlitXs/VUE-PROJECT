@@ -1,29 +1,29 @@
 {
-  "name": "vue-collection",
-  "version": "1.0.0",
-  "description": "Vue.js collection+JSON applicacion (client + PHP API server)",
-  "author": "Pedro Prieto <pedpral@gmail.com>",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build"
-  },
-  "dependencies": {
-    "axios": "^0.18.0",
-    "vue": "^2.5.21"
-  },
-  "devDependencies": {
-    "@vue/cli-service": "^3.3.0",
-    "vue-template-compiler": "^2.5.21"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not ie <= 8"
-  ]
+	"name": "vue-collection",
+	"version": "1.0.0",
+	"description": "Vue.js collection+JSON applicacion (client + PHP API server)",
+	"author": "Pedro Prieto <pedpral@gmail.com>",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build"
+	},
+	"dependencies": {
+		"axios": "^0.18.0",
+		"vue": "^2.5.21"
+	},
+	"devDependencies": {
+		"@vue/cli-service": "^3.3.0",
+		"vue-template-compiler": "^2.5.21"
+	},
+	"private": true,
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions",
+		"not ie <= 8"
+	]
 }
