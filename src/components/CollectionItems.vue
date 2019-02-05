@@ -36,6 +36,14 @@
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
 
+    <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
+      <div v-for="movie in item.data">
+        <p class="card-header" style="margin: 10px">
+          {{ movie.value }}
+        </p>
+      </div>
+    </div>
+
   </div>
 
 </template>
