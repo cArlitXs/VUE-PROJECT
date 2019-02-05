@@ -37,15 +37,20 @@
     <h3>Items component</h3>
 
     <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
-      <div v-for="movie in item.data">
-        <p class="card-header" style="margin: 10px">
-          {{ movie.value }}
-        </p>
+      <div>
+        <MoviesComponent v-if="collection.type=='movie'"></MoviesComponent>
+        <BookComponent v-if="collection.type=='books'"></BookComponent>
+        <TVSeriesComponent v-if="collection.type=='tvseries'"></TVSeriesComponent>
+        <MusicComponent v-if="collection.type=='music'"></MusicComponent>
+        <VideoGameComponent v-if="collection.type=='VideoGame'"></VideoGameComponent>
+      </div>
+      <button v-on:click="borrar(item)" disabled>Borrar</button>
+      <button v-on:click="processLink(item, $event)">Enlace</button>
+      <div>
+        <EditForm :template="data" :item="item"></EditForm>
       </div>
     </div>
-
   </div>
-
 </template>
 
 <script>
@@ -53,6 +58,7 @@
  // Import components
  import EditForm from './EditForm';
  // TODO: import components for the 5 item types
+ import MoviesComponent from './MoviesComponent';
 
  export default {
    name: 'CollectionItems',
