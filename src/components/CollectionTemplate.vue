@@ -11,8 +11,10 @@
 
     <div v-for="item in template.data">
       <label>
-        {{item.prompt}}
-      </label>
+      {{item.prompt}}
+    </label>
+    <input v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'">
+      <textarea v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'"></textarea>
     </div>
   </div>
 
