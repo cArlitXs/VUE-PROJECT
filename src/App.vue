@@ -1,28 +1,25 @@
 <template>
 <div id="app">
-  <header>
-    <h1>Cliente Biblioteca Multimedia</h1>
-    
-    <!-- Display collection title -->
-    <h2 class="text-center">{{c.collection.title}}</h2>
-  </header>
-  
   <main>
     <!--  links Container  -->
     <!-- We pass the links array to the links component -->
     <!-- https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <CollectionLinks :links="c.collection.links" @link-clicked="readCollection"></CollectionLinks>
-    
+
     <!--  items Container  -->
     <!-- We pass the whole collection object to the items component -->
     <!-- https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <CollectionItems :collection="c.collection" @link-clicked="readCollection" @refresh="readCollection"></CollectionItems>
-    
+
     <!-- Template Container -->
     <!-- We pass collection.href and collection.template to the component -->
     <!-- https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <CollectionTemplate :createurl="c.collection.href" :template="c.collection.template" @refresh="readCollection"></CollectionTemplate>
   </main>
+  <header>
+    <!-- Display collection title -->
+    <h2 class="text-center">{{c.collection.title}}</h2>
+  </header>
 </div>
 </template>
 
@@ -36,7 +33,7 @@ import CollectionTemplate from './components/CollectionTemplate';
 
 export default {
   name: 'App',
-  
+
   // Initialization:
   // Function that runs when the component is created
 	// When the app ploads, it connects to the entry point of the API, "/api/", to get a collection object
@@ -45,7 +42,7 @@ export default {
     // AJAX request to /api/ (entry point of the app)
     this.readCollection('/api/');
   },
-  
+
   // Component data
   data: function() {
     return {
@@ -53,14 +50,14 @@ export default {
       c: null
     }
   },
-  
+
   // Components used by this component
   components: {
     CollectionItems,
     CollectionLinks,
     CollectionTemplate
   },
-  
+
   // Methods
   methods: {
     readCollection: function(url) {
@@ -77,7 +74,7 @@ export default {
           // If error, display in console
           console.log(e);
         });
-      
+
     }
   }
 }
