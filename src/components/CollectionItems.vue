@@ -38,11 +38,11 @@
 
     <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
       <div>
-        <MoviesComponent v-if="collection.type=='movie'"></MoviesComponent>
-        <BookComponent v-if="collection.type=='books'"></BookComponent>
-        <TVSeriesComponent v-if="collection.type=='tvseries'"></TVSeriesComponent>
-        <MusicComponent v-if="collection.type=='music'"></MusicComponent>
-        <VideoGameComponent v-if="collection.type=='VideoGame'"></VideoGameComponent>
+        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'"></MoviesComponent>
+        <BookComponent :item="item" :template="collection.template" v-if="collection.type=='book'"></BookComponent>
+        <TVSeriesComponent :item="item" :template="collection.template" v-if="collection.type=='tvseries'"></TVSeriesComponent>
+        <MusicComponent :item="item" :template="collection.template" v-if="collection.type=='music'"></MusicComponent>
+        <VideoGameComponent :item="item" :template="collection.template" v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
       <button v-on:click="borrar(item)" disabled>Borrar</button>
       <button v-on:click="processLink(item, $event)">Enlace</button>
