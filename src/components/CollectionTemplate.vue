@@ -8,7 +8,6 @@
 
   <div class="container">
     <h3>Template component</h3>
-
     <div v-for="item in template.data">
       <label>
       {{item.prompt}}

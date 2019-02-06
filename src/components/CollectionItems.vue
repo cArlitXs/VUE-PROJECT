@@ -35,7 +35,16 @@
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
-
+    <div v-for="item in collection.items">
+      <div>
+        contenido
+      </div>
+      <button @click="deleteItem(item)" type="button" name="button">Borrar</button>
+      <button type="button" name="button">Enlace</button>
+      <div>
+        Edicion
+      </div>
+    </div>
   </div>
 
 </template>
@@ -45,7 +54,7 @@
  // Import components
  import EditForm from './EditForm';
  // TODO: import components for the 5 item types
-
+ import Videogames from './Videogames';
  export default {
    name: 'CollectionItems',
    props: [
