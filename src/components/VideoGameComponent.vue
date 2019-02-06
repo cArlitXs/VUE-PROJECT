@@ -17,12 +17,16 @@
      -->
   <div>
     <h3>Movies</h3>
-    {{item.data[0].prompt}}
-    <div v-if="item.data[3]">
-      {{item.data[3].prompt}}
+    {{item.data[0].prompt}}: {{item.data[0].value}}
+    <div v-if="item.data[1]">
+      <b>{{item.data[0].prompt}}:</b> {{item.data[0].value}}<br>
+      <b>{{item.data[1].prompt}}:</b> {{item.data[1].value}}<br>
+      <b>{{item.data[2].prompt}}:</b></b> {{item.data[2].value}}<br>
+      <b>{{item.data[3].prompt}}:</b> {{item.data[3].value}}<br>
+      <b>{{item.data[4].prompt}}:</b> {{item.data[4].value}}<br>
+      <b>{{item.data[5].prompt}}:</b> {{item.data[5].value}}<br>
+      <b>{{item.data[6].prompt}}:</b> {{item.data[6].value}}
     </div>
-    hola
-
   </div>
 
 </template>
