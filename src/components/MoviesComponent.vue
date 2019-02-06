@@ -16,12 +16,7 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}}
-    <div v-if="item.data[3]">
-      {{item.data[3].prompt}}
-    </div>
-    hola
+   
 
   </div>
 

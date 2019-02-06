@@ -1,5 +1,7 @@
 <template>
 
+
+
   <!-- This component will receive the collection.template object available in the 'template' prop and the item.data array available in the 'data' prop.
 
        It will create a filled edit template combining the data and the template objects. This filled template will be available in the 'editTemplate' computed property.
@@ -16,12 +18,9 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}}
-    <div v-if="item.data[3]">
-      {{item.data[3].prompt}}
-    </div>
-    hola
+
+    
+     <h3>dhajshdjahs</h3>
 
   </div>
 
