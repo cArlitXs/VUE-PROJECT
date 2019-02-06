@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container">
         <a class="navbar-brand" href="/">
           <img src="https://getbootstrap.com/docs/4.2/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
@@ -19,7 +19,7 @@
               <a class="nav-link" href="#">Link</a>
             </li>-->
             <li class="nav-item" v-for="link in links" v-if="link.rel=='collection'">
-              <a class="nav-link" :href="link.href" @click="processLink(link, $event)">{{link.prompt}}</a>
+              <a class="nav-link pl-3 pr-3" :href="link.href" @click="processLink(link, $event)">{{link.prompt}}</a>
             </li>
             <!--<li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -52,7 +52,9 @@
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
 
+
     <!--<h3>Links component</h3>-->
+
   </div>
 
 </template>
@@ -64,6 +66,7 @@
    /* https://vuejs.org/v2/guide/components.html#Dynamic-Props*/
    props: [
      // This prop stores the collection.links array
+     //Que solo aparecen los enlaces de tipo collection
      'links'
    ],
    data: function() {

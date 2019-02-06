@@ -36,16 +36,17 @@
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
 
-    <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
+    <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
-        <MoviesComponent v-if="collection.type=='movie'"></MoviesComponent>
-        <BookComponent v-if="collection.type=='books'"></BookComponent>
-        <TVSeriesComponent :item="item" v-if="collection.type=='tvseries'"></TVSeriesComponent>
-        <MusicComponent v-if="collection.type=='music'"></MusicComponent>
-        <VideoGameComponent v-if="collection.type=='VideoGame'"></VideoGameComponent>
+        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'"></MoviesComponent>
+        <BookComponent :item="item" :template="collection.template" v-if="collection.type=='book'"></BookComponent>
+        <TVSeriesComponent :item="item" :template="collection.template" v-if="collection.type=='tvseries'"></TVSeriesComponent>
+        <MusicComponent :item="item" :template="collection.template" v-if="collection.type=='music'"></MusicComponent>
+        <VideoGameComponent :item="item" :template="collection.template" v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
-      <button v-on:click="borrar(item)" disabled>Borrar</button>
-      <button v-on:click="processLink(item, $event)">Enlace</button>
+      <hr>
+      <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
+      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
       <div>
         <EditForm :template="data" :item="item"></EditForm>
       </div>
