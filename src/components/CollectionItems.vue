@@ -36,6 +36,22 @@
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
     <h3>Items component</h3>
 
+    <div v-for="item in collection.items">
+      <!-- <div> 
+        contenido del item
+      </div>
+      <button @click="borrar(item)">borrar</button>
+      <button @click="processLink(item, $event)">enlace</button>
+      <div>
+        edicion
+        <EditForm :template="collection.template" :item="item"></EditForm>
+      </div>-->
+
+      <div>
+        <TVseries :item="item" :template="collection.template" v-if="collection.type === 'tvseries'"></TVseries>
+      </div>
+    </div>
+
   </div>
 
 </template>
@@ -44,6 +60,8 @@
  import axios from 'axios';
  // Import components
  import EditForm from './EditForm';
+ import TVseries from './TVseries';
+
  // TODO: import components for the 5 item types
 
  export default {
@@ -57,7 +75,8 @@
      }
    },
    components: {
-     EditForm
+     EditForm,
+     TVseries
      // TODO: add custom components for each of the four item categories
    },
    methods: {
@@ -90,7 +109,13 @@
               // If error, display in console
               console.log(e);
             });
-     }
+     },
+
+     /*borrar: function(item){
+       preguntar
+       si preguntar == de acuerdo
+       this.deleteItem(item);
+     }*/
    }
  }
 </script>

@@ -19,6 +19,20 @@
     <h3>Edit Form component</h3>
 
     <!-- TODO -->
+    <!--{{item}}
+    {{template}}-->
+
+    <div v-for="item in editTemplate.items">
+      <div>
+        contenido del item
+      </div>
+      <button @click="borrar(item)">borrar</button>
+      <button @click="processLink(item, $event)">enlace</button>
+      <div>
+        edicion
+        <EditForm :template="collection.template" :item="item"></EditForm>
+      </div>
+    </div>
 
   </div>
 

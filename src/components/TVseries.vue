@@ -1,21 +1,21 @@
 <template>
 
-  <!-- This component will build a web form to display the collection.template available in the 'template' prop. This form will be bound to the 'template' prop. When the form is submitted, the method 'createItem' will be called to send the data to the server and create a new item. -->
-
-  <!-- How to bind form inputs to data: https://vuejs.org/v2/guide/forms.html -->
-
-  <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
-
   <div class="container">
     <h3>Template component</h3>
 
-    <div v-for="item in template.data">
-      <label>
-        {{item.prompt}}
-      </label>
+    <!-- <div v-for="element in item.data">
+      <strong><label v-if="element.name !== 'name'">{{element.prompt}}</label></strong>
+      <br>
+      <label v-if="element.name !== 'name'">{{element.value}}</label>
     </div>
-  </div>
+  </div> -->
 
+    <div v-for="element in items.data">
+        {{element.data}}
+    </div>
+    <!-- {{ item.value }} -->
+
+  </div>
 </template>
 
 <script>
@@ -23,11 +23,11 @@
  import axios from 'axios';
 
  export default {
-   name: 'CollectionTemplate',
+   name: 'TVseries',
    // Component props https://vuejs.org/v2/guide/components.html#Props
    props: [
      // This prop stores the collection.href property
-     'createurl',
+     'item',
      // This prop stores the collection.template object
      'template'
    ],
