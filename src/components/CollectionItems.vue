@@ -40,7 +40,7 @@
       <div>
         <MoviesComponent v-if="collection.type=='movie'"></MoviesComponent>
         <BookComponent v-if="collection.type=='books'"></BookComponent>
-        <TVSeriesComponent v-if="collection.type=='tvseries'"></TVSeriesComponent>
+        <TVSeriesComponent :item="item" v-if="collection.type=='tvseries'"></TVSeriesComponent>
         <MusicComponent v-if="collection.type=='music'"></MusicComponent>
         <VideoGameComponent v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
@@ -57,8 +57,6 @@
  import axios from 'axios';
  // Import components
  import EditForm from './EditForm';
- import TVseries from './TVseries';
-
  // TODO: import components for the 5 item types
  import MoviesComponent from './MoviesComponent';
  import BookComponent from './BookComponent';
@@ -116,12 +114,6 @@
               console.log(e);
             });
      },
-
-     /*borrar: function(item){
-       preguntar
-       si preguntar == de acuerdo
-       this.deleteItem(item);
-     }*/
    }
  }
 </script>
