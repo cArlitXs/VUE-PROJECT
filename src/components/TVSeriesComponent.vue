@@ -18,6 +18,7 @@
   <div>
     <h3>Movies</h3>
     {{item.data[0].prompt}} :  {{item.data[0].value}}
+    
     <div v-if="item.data[1]">
       {{item.data[1].prompt}} : {{item.data[1].value}}
       <br>
