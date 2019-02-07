@@ -16,9 +16,18 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    <label for=""></label>
-    {{item.data[0].value}}
+    
+    <div>
+      <h1>{{item.data[0].value}}</h1>
+      <p>{{item.data[1].value}}</p>
+      <p>Su director es: {{item.data[2].value}}</p>
+      <p>Fecha de estreno: {{item.data[3].value}}</p>
+      <p>Trailer:</p>
+      <iframe :src="item.data[4].value" frameborder="0"></iframe>
+    </div>
+    
+    
+    
     
 
   </div>

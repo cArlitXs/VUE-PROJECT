@@ -38,7 +38,8 @@
 
     <div v-for="item in collection.items" class="card bg-light"style="margin: 10px">
       <div>
-        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'"></MoviesComponent>
+        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'">
+        </MoviesComponent>
         <BookComponent :item="item" :template="collection.template" v-if="collection.type=='book'"></BookComponent>
         <TVSeriesComponent :item="item" :template="collection.template" v-if="collection.type=='tvseries'"></TVSeriesComponent>
         <MusicComponent :item="item" :template="collection.template" v-if="collection.type=='music'"></MusicComponent>
