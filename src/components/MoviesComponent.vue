@@ -16,14 +16,13 @@
 
      -->
   <div>
-    
-    <div>
-      <h1>{{item.data[0].value}}</h1>
+    <h1>{{item.data[0].value}}</h1>
+    <div v-if=item.data[1]>
       <p>{{item.data[1].value}}</p>
-      <p>Su director es: {{item.data[2].value}}</p>
-      <p>Fecha de estreno: {{item.data[3].value}}</p>
+      <p>El {{item.data[2].name}} es: <br>{{item.data[2].value}}</p>
+      <p>Fecha de estreno: <br>{{item.data[3].value}}</p>
       <p>Trailer:</p>
-      <iframe :src="item.data[4].value" frameborder="0"></iframe>
+      <iframe :src="item.data[4].value" frameborder="1"></iframe>
     </div>
     
     

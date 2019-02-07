@@ -48,9 +48,10 @@
       <hr>
       <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
       <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
-      <div>
-        <EditForm :template="data" :item="item"></EditForm>
-      </div>
+      
+    </div>
+    <div v-for="item in collection.items">
+      <EditForm :template="collection.template" :item="item"></EditForm>
     </div>
   </div>
 </template>
