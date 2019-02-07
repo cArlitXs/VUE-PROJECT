@@ -38,7 +38,8 @@
 
     <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
-        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'"></MoviesComponent>
+        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'">
+        </MoviesComponent>
         <BookComponent :item="item" :template="collection.template" v-if="collection.type=='book'"></BookComponent>
         <TVSeriesComponent :item="item" :template="collection.template" v-if="collection.type=='tvseries'"></TVSeriesComponent>
         <MusicComponent :item="item" :template="collection.template" v-if="collection.type=='music'"></MusicComponent>
@@ -46,10 +47,18 @@
       </div>
       <hr>
       <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
+<<<<<<< HEAD
       <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
       <div>
         <EditForm :template="data" :item="item"></EditForm>
       </div>
+=======
+      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
+      
+    </div>
+    <div v-for="item in collection.items">
+      <EditForm :template="collection.template" :item="item"></EditForm>
+>>>>>>> origin/master
     </div>
   </div>
 </template>
