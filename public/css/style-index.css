@@ -4,6 +4,9 @@
   /*font-family: 'Roboto Slab', sans-serif;*/
   font-family: 'Bree Serif', serif;
 }
+body{
+  background: #111;
+}
 canvas {
   display: block;
   vertical-align: bottom;
@@ -13,6 +16,7 @@ canvas {
   width: 100%;
   height: 100%;
   background: #111;
+  background-size: 100% 100%;
   z-index: -9999;
 }
 #app{
@@ -44,4 +48,17 @@ hr{
   border: 0;
   border-top: 1px solid #ccc;
   padding: 0;
+}
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }

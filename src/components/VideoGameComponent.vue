@@ -16,19 +16,16 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}}: {{item.data[0].value}}
+    <h1>{{item.data[0].value}}</h1>
+    <p v-if="item.data[4]"><img :src="item.data[4].value"></p>
     <div v-if="item.data[1]">
-      <b>{{item.data[0].prompt}}:</b> {{item.data[0].value}}<br>
-      <b>{{item.data[1].prompt}}:</b> {{item.data[1].value}}<br>
-      <b>{{item.data[2].prompt}}:</b></b> {{item.data[2].value}}<br>
-      <b>{{item.data[3].prompt}}:</b> {{item.data[3].value}}<br>
-      <b>{{item.data[4].prompt}}:</b> {{item.data[4].value}}<br>
-      <b>{{item.data[5].prompt}}:</b> {{item.data[5].value}}<br>
-      <b>{{item.data[6].prompt}}:</b> {{item.data[6].value}}
+      <p class="font-weight-bold text-warning">{{item.data[1].prompt}}:</p><p class="font-weight-light text-justify">{{item.data[1].value}}</p>
+      <p class="font-weight-bold text-warning">{{item.data[2].prompt}}:</p><p class="font-weight-light">{{item.data[2].value}}</p>
+      <p class="font-weight-bold text-warning">{{item.data[3].prompt}}:</p><p class="font-weight-light">{{item.data[3].value}}</p>
+      <p class="font-weight-bold text-warning">{{item.data[5].prompt}}:</p><p class="font-weight-light">{{item.data[5].value}}</p>
+      <p class="font-weight-bold text-warning">{{item.data[6].prompt}}:</p><div class="videoWrapper text-center"><iframe class="col-12" :src="item.data[6].value"></iframe></div>
     </div>
   </div>
-
 </template>
 
 <script>

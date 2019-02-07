@@ -46,7 +46,7 @@
       </div>
       <hr>
       <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
+      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
       <div>
         <EditForm :template="data" :item="item"></EditForm>
       </div>
