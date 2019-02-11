@@ -23,7 +23,7 @@
       </label>
       <input type="text" v-model="item.value">
     </div>
-    <button class="btn btn-warning m-1" v-on:click="updateItem(item)">Editar</button>
+    <button class="btn btn-warning m-1" v-on:click="updateItem">Editar</button>
   </div>
 
 </template>
