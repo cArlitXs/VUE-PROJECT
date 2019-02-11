@@ -15,11 +15,15 @@
        Listening to events: https://vuejs.org/v2/guide/events.html
 
      -->
-  <div>
+  <div class="container">
     <h3>Edit Form component</h3>
-
-    <!-- TODO -->
-
+    <div v-for="item in editTemplate.data">
+      <label>
+      {{item.prompt}}
+      </label>
+      <input type="text" v-model="item.value">
+    </div>
+    <button class="btn btn-warning m-1" v-on:click="updateItem(item)">Editar</button>
   </div>
 
 </template>

@@ -16,11 +16,13 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    <label for=""></label>
-    {{item.data[0].value}}
-    
-
+    <div v-if=item.data[1]>
+      <p class="text-warning">Descripción:</p><p>{{item.data[1].value}}</p>
+      <p class="text-warning">Director:</p><p>{{item.data[2].value}}</p>
+      <p class="text-warning">Fecha de estreno:</p><p>{{item.data[3].value}}</p>
+      <p class="text-warning">Trailer:</p>
+      <iframe :src="item.data[4].value" frameborder="1"></iframe>
+    </div>
   </div>
 
 </template>
