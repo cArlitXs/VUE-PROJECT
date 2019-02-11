@@ -5,15 +5,13 @@
   <div class="container">
     <h3>Template component</h3>
     <div v-for="item in template.data">
-      <label>{{item.prompt}}</label>
+      <label>
+        {{item.prompt}}
+      </label>
       <input v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'">
-      <textarea
-        v-model="item.value"
-        :type="item.type"
-        :name="item.name"
-        v-if="item.type=='textarea'"
-      ></textarea>
+      <textarea v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'"></textarea>
     </div>
+    <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
   </div>
 </template>
 

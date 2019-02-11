@@ -21,13 +21,19 @@
     <h4 class="text-warning">{{item.data[0].prompt}} :</h4>  {{item.data[0].value}}
     
     <div v-if="item.data[1]">
+      
+      <div class="col-6">
+        <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}}
+      </div>
+
+      <div class="videoWrapper text-center"><iframe  class="col-12" :src="item.data[6].value" width="600px" height="300px"></iframe></div>
       <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}}
       <h4 class="text-warning">{{item.data[2].prompt}} :</h4> {{item.data[2].value}}
       <h4 class="text-warning">{{item.data[3].prompt}} :</h4> {{item.data[3].value}}
       <h4 class="text-warning">{{item.data[4].prompt}} :</h4> {{item.data[4].value}}
       <h4 class="text-warning">{{item.data[5].prompt}} :</h4> {{item.data[5].value}}
       <h4 class="text-warning">{{item.data[6].prompt}} :</h4> 
-      <div class="videoWrapper text-center"><iframe  class="col-12" :src="item.data[6].value" width="600px" height="300px"></iframe></div>
+      
       
     </div>
 
