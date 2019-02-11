@@ -27,7 +27,7 @@
       <h4 class="text-warning">{{item.data[4].prompt}} :</h4> {{item.data[4].value}}
       <h4 class="text-warning">{{item.data[5].prompt}} :</h4> {{item.data[5].value}}
       <h4 class="text-warning">{{item.data[6].prompt}} :</h4> 
-      <div class="videoWrapper text-center"><iframe :src="item.data[6].value" width="600px" height="300px" class="col-12"></iframe></div>
+      <div class="videoWrapper text-center"><iframe  class="col-12" :src="item.data[6].value" width="600px" height="300px"></iframe></div>
       
     </div>
 
