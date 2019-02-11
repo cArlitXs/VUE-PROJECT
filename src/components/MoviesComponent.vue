@@ -16,7 +16,6 @@
 
      -->
   <div>
-    <h1 class="text-warning">{{item.data[0].value}}</h1>
     <div v-if=item.data[1]>
       <p class="text-warning">Descripción:</p><p>{{item.data[1].value}}</p>
       <p class="text-warning">Director:</p><p>{{item.data[2].value}}</p>

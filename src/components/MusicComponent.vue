@@ -1,5 +1,7 @@
 <template>
 
+
+
   <!-- This component will receive the collection.template object available in the 'template' prop and the item.data array available in the 'data' prop.
 
        It will create a filled edit template combining the data and the template objects. This filled template will be available in the 'editTemplate' computed property.
@@ -16,12 +18,22 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}}
-    <div v-if="item.data[3]">
-      {{item.data[3].prompt}}
+
+ 
+   <!--  <label><b>{{item.data[0].prompt}}:  {{item.data[0].value}}</b></label>
+    <label><b>{{item.data[1].prompt}}:  {{item.data[1].value}}</b></label> -->
+
+    <h1>{{item.data[0].value}}</h1>
+    <div v-if=item.data[1]>
+      <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
+      <p>{{item.data[1].value}}</p>
+      <p>{{item.data[2].prompt}}: <span class="font-weight-bold text-warning">{{item.data[2].value}} </span></p>
+       <p id="itemIMG" v-if="item.data[3]"><img :src="item.data[3].value"></p>
+      <p>Escuchala en directo:</p>
+      <iframe :src="item.data[4].value" frameborder="1"></iframe>
     </div>
-    hola
+
+    
 
   </div>
 
@@ -32,7 +44,7 @@
  import axios from 'axios';
 
  export default {
-   name: 'Movies',
+   name: 'MusicComponent',
    // Component props https://vuejs.org/v2/guide/components.html#Props
    props: [
      // This prop stores the collection.template object
