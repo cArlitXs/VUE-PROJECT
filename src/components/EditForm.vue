@@ -15,24 +15,15 @@
        Listening to events: https://vuejs.org/v2/guide/events.html
 
      -->
-  <div>
+  <div class="container">
     <h3>Edit Form component</h3>
-
-    <!-- TODO -->
-    <!--{{item}}
-    {{template}}-->
-
-    <div v-for="item in editTemplate.items">
-      <div>
-        contenido del item
-      </div>
-      <button @click="borrar(item)">borrar</button>
-      <button @click="processLink(item, $event)">enlace</button>
-      <div>
-        edicion
-        <EditForm :template="collection.template" :item="item"></EditForm>
-      </div>
+    <div v-for="item in editTemplate.data">
+      <label>
+      {{item.prompt}}
+      </label>
+      <input type="text" v-model="item.value">
     </div>
+  </div>
 
   </div>
 
