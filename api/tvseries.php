@@ -98,9 +98,9 @@ $app->post('/tvseries', function ($req, $res, $args) {
 
 $app->put('/tvseries/{name}', function ($req, $res, $args) {
 
-	// Creamos un objeto collection + json con el libro pasado como parámetro
 
-	// Obtenemos el libro de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
+
+	// Obtenemos la serie de la base de datos a partir de su id y la convertimos del formato Json (el devuelto por Eloquent) a un array PHP
 	$tvserie = \tvserie::find($args['name']);	
 
     $template = $req->getParsedBody();
@@ -111,25 +111,25 @@ $app->put('/tvseries/{name}', function ($req, $res, $args) {
 		switch($item['name'])
 		{
         case "name":
-            $name = $datos[$i]['value'];
+            $name = $item['value'];
             break;
         case "description":
-            $desc = $datos[$i]['value'];
+            $desc = $item['value'];
             break;
         case "director":
-            $director = $datos[$i]['value'];
+            $director = $item['value'];
             break;
         case "numberOfSeasons":
-            $numberOfSeasons= $datos[$i]['value'];
+            $numberOfSeasons= $item['value'];
             break;
         case "numberOfEpisodes":
-            $numberOfEpisodes = $datos[$i]['value'];
+            $numberOfEpisodes = $item['value'];
             break;
         case "datePublished":
-            $date = $datos[$i]['value'];
+            $date = $item['value'];
             break;
         case "embedUrl":
-            $embedUrl = $datos[$i]['value'];
+            $embedUrl = $item['value'];
             break;		
         }    
 		}

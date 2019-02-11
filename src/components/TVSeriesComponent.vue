@@ -16,21 +16,18 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}} :  {{item.data[0].value}}
+    <h1>Movies</h1>
+
+    <h4 class="text-warning">{{item.data[0].prompt}} :</h4>  {{item.data[0].value}}
     
     <div v-if="item.data[1]">
-      {{item.data[1].prompt}} : {{item.data[1].value}}
-      <br>
-      {{item.data[2].prompt}} : {{item.data[2].value}}
-      <br>
-      {{item.data[3].prompt}} : {{item.data[3].value}}
-      <br>
-      {{item.data[4].prompt}} : {{item.data[4].value}}
-      <br>
-      {{item.data[5].prompt}} : {{item.data[5].value}}
-      <br>
-      {{item.data[6].prompt}} : <iframe :src="item.data[6].value"></iframe>
+      <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}}
+      <h4 class="text-warning">{{item.data[2].prompt}} :</h4> {{item.data[2].value}}
+      <h4 class="text-warning">{{item.data[3].prompt}} :</h4> {{item.data[3].value}}
+      <h4 class="text-warning">{{item.data[4].prompt}} :</h4> {{item.data[4].value}}
+      <h4 class="text-warning">{{item.data[5].prompt}} :</h4> {{item.data[5].value}}
+      <h4 class="text-warning">{{item.data[6].prompt}} :</h4> 
+      <iframe :src="item.data[6].value"></iframe>
     </div>
 
   </div>
