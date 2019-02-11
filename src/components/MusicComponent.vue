@@ -19,8 +19,22 @@
      -->
   <div>
 
+ 
+   <!--  <label><b>{{item.data[0].prompt}}:  {{item.data[0].value}}</b></label>
+    <label><b>{{item.data[1].prompt}}:  {{item.data[1].value}}</b></label> -->
+
+    {{item.data[0].prompt}}: {{item.data[0].value}}
+    <div v-if=item.data[1]>
+      <b>{{item.data[0].prompt}}:</b> {{item.data[0].value}}<br>
+      <b>{{item.data[1].prompt}}:</b> {{item.data[1].value}}<br>
+      <b>{{item.data[2].prompt}}:</b> {{item.data[2].value}}<br>
+      <b>{{item.data[3].prompt}}:</b> {{item.data[3].value}}<br>
+      <b>{{item.data[4].prompt}}:</b> {{item.data[4].value}}<br>
+      <b>{{item.data[5].prompt}}:</b> {{item.data[5].value}}<br>
+      <b>{{item.data[6].prompt}}:</b> {{item.data[6].value}}<br>
+    </div>
+
     
-     <h3>dhajshdjahs</h3>
 
   </div>
 
@@ -31,7 +45,7 @@
  import axios from 'axios';
 
  export default {
-   name: 'Movies',
+   name: 'MusicComponent',
    // Component props https://vuejs.org/v2/guide/components.html#Props
    props: [
      // This prop stores the collection.template object

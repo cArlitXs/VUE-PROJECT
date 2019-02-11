@@ -15,15 +15,10 @@
        Listening to events: https://vuejs.org/v2/guide/events.html
 
      -->
-  <div class="container">
+  <div>
     <h3>Edit Form component</h3>
-    <div v-for="item in editTemplate.data">
-      <label>
-      {{item.prompt}}
-      </label>
-      <input type="text" v-model="item.value">
-    </div>
-  </div>
+
+    <!-- TODO -->
 
   </div>
 
@@ -34,7 +29,7 @@
  import axios from 'axios';
 
  export default {
-   name: 'EditForm',
+   name: 'Videogames',
    // Component props https://vuejs.org/v2/guide/components.html#Props
    props: [
      // This prop stores the collection.template object
@@ -95,4 +90,3 @@
 <style scoped>
 
 </style>
-
