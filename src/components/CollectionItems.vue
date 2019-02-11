@@ -34,7 +34,7 @@
     <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
-    <h3>Items component</h3>
+    <!--<h3>Items component</h3>-->
 
     <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
@@ -46,12 +46,15 @@
         <VideoGameComponent :item="item" :template="collection.template" v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
       <hr>
-      <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
-      
-    </div>
-    <div v-for="item in collection.items">
-      <EditForm :template="collection.template" :item="item"></EditForm>
+      <div class="row">
+        <div class="col">
+          <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
+          <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
+        </div>
+      </div>
+      <div>
+        <EditForm :template="data" :item="item"></EditForm>
+      </div>
     </div>
   </div>
 </template>
