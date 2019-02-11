@@ -23,15 +23,14 @@
    <!--  <label><b>{{item.data[0].prompt}}:  {{item.data[0].value}}</b></label>
     <label><b>{{item.data[1].prompt}}:  {{item.data[1].value}}</b></label> -->
 
-    {{item.data[0].prompt}}: {{item.data[0].value}}
+    <h1>{{item.data[0].value}}</h1>
     <div v-if=item.data[1]>
-      <b>{{item.data[0].prompt}}:</b> {{item.data[0].value}}<br>
-      <b>{{item.data[1].prompt}}:</b> {{item.data[1].value}}<br>
-      <b>{{item.data[2].prompt}}:</b> {{item.data[2].value}}<br>
-      <b>{{item.data[3].prompt}}:</b> {{item.data[3].value}}<br>
-      <b>{{item.data[4].prompt}}:</b> {{item.data[4].value}}<br>
-      <b>{{item.data[5].prompt}}:</b> {{item.data[5].value}}<br>
-      <b>{{item.data[6].prompt}}:</b> {{item.data[6].value}}<br>
+      <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
+      <p>{{item.data[1].value}}</p>
+      <p>{{item.data[2].prompt}}: <span class="font-weight-bold text-warning">{{item.data[2].value}} </span></p>
+       <p id="itemIMG" v-if="item.data[3]"><img :src="item.data[3].value"></p>
+      <p>Escuchala en directo:</p>
+      <iframe :src="item.data[4].value" frameborder="1"></iframe>
     </div>
 
     
