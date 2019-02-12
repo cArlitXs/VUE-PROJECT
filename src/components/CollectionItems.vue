@@ -34,7 +34,6 @@
     <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
-    <h3>Items component</h3>
 
     <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
@@ -47,10 +46,10 @@
       </div>
       <hr>
       <button class="btn btn-warning m-1" v-on:click="deleteItem(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
-      <EditForm :template="collection.template" :item="item" v-if=item.data[1]></EditForm>
+      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
+      <EditForm @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
-    
+
   </div>
 </template>
 
