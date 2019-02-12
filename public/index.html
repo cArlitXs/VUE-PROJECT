@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <meta charset="utf-8">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
@@ -9,9 +9,32 @@
     <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
     <link rel="stylesheet" href="<%= BASE_URL %>css/style-index.css">
     <title>VUEMW</title>
+    <style>
+        .progress {
+            position: fixed !important;
+            width: 100%;
+            height: 8px;
+            border-radius: 0;
+            z-index:500;
+            background: rgba(0,0,0,0.2);
+        }
+    </style>
+    <script type="text/javascript">
+        window.onscroll = function () { myFunction() };
+
+        function myFunction() {
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("bar").style.width = scrolled + "%";
+        }
+    </script>
   </head>
   <body><!--id="particles-js"-->
     <div id="particles-js"></div>
+    <div class="progress">
+        <div class="progress-bar bg-warning" id="bar"></div>
+    </div>
     <div id="app" class="container-fluid">
       <!--Aqui se debe construir la app-->
     </div>

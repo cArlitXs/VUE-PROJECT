@@ -50,10 +50,8 @@
         <div class="col">
           <button class="btn btn-warning m-1" v-on:click="borrar(item)" disabled>Borrar</button>
           <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
+          <EditForm :template="data" :item="item"></EditForm>
         </div>
-      </div>
-      <div>
-        <EditForm :template="data" :item="item"></EditForm>
       </div>
     </div>
   </div>
