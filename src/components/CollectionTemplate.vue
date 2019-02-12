@@ -8,13 +8,19 @@
 
   <div class="container">
     <div class="card p-2 m-2">
-      <h3>Template component</h3>
-      <div class="form-group row" v-for="item in template.data">
-        <label class="col-md-3">{{item.prompt}}: </label>
-        <input class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
-        <textarea class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt"></textarea>
+      <h3 class="text-center">
+        <a href="#element" id="show" @click="mostrar()">Mostrar</a>|
+        <a href="#element" id="hide" @click="mostrar()">Ocultar</a>
+      </h3>
+      <div>
+        <div id="element" class="form-group row" v-for="item in template.data" style="display: none;">
+          <label class="col-md-3">{{item.prompt}}: </label>
+          <input class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
+          <textarea class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt"></textarea>
+        </div>
+        <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
       </div>
-      <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
+      
     </div>
   </div>
 
@@ -59,6 +65,16 @@
               // If error, display in console
               console.log(e);
             });
+     },
+     mostrar: function(){
+        $(document).ready(function(){
+        $("#hide").click(function(){
+          $("#element").hide();
+        });
+        $("#show").click(function(){
+          $("#element").show();
+        });
+      });
      }
    }
  }
