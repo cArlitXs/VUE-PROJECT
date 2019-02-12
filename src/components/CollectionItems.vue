@@ -46,12 +46,10 @@
       </div>
       <hr>
       <button class="btn btn-warning m-1" v-on:click="deleteItem(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Enlace</button>
-      <button class="btn btn-secondary m-1" v-on:click="ocultar()">Editar</button>
-      <EditForm id="editar" @refresh="refresh" :template="collection.template" :item="item" v-if=item.data[1] style="display: none">
-      </EditForm>
+      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
+      <EditForm @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
-    
+
   </div>
 </template>
 
@@ -99,9 +97,6 @@
      // Function that runs to reload the item.url after an item update
      refresh: function(url) {
        this.$emit('refresh', url);
-     },
-     ocultar: function(){
-       document.getElementById('editar').display = block;
      },
      deleteItem: function(item) {
 	     // Method to do a DELETE request to delete an item
