@@ -5,12 +5,23 @@
   <div class="container">
     <div class="card p-2 m-2">
       <h3>Template component</h3>
-      <div class="form-group row" v-for="item in template.data">
-        <label class="col-md-3">{{item.prompt}}: </label>
-        <input class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
-        <textarea class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt"></textarea>
+      <div class="form-group" v-for="item in template.data">
+        <div class="row">
+          <div class="col-md-3">
+            <label>{{item.prompt}}: </label>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt + '...'">
+            <textarea class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt + '...'" rows="6"></textarea>
+          </div>
+        </div>
       </div>
-      <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
+
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-success btn-sm" v-on:click="createItem(item)">Crear Nuevo</button>
+        </div>
+      </div>
     </div>
   </div>
 </template>

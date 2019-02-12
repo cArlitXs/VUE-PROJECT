@@ -17,12 +17,22 @@
      -->
   <div class="card">
     <h3>Edit Form component</h3>
-    <div class="form-group row" v-for="item in editTemplate.data">
-      <label class="col-md-3">{{item.prompt}}: </label>
-      <input class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
-      <textarea class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt"></textarea>
-    </div>
-    <button class="btn btn-success m-1" v-on:click="updateItem">Editar</button>
+      <div class="form-group" v-for="item in editTemplate.data">
+        <div class="row">
+          <div class="col-md-3">
+            <label>{{item.prompt}}: </label>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
+            <textarea class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-12">
+          <button class="btn btn-info btn-sm" v-on:click="updateItem">Editar</button>
+        </div>
+      </div>
   </div>
 
 </template>
