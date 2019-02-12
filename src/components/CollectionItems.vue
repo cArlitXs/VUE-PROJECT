@@ -113,7 +113,7 @@
               // If error, display in console
               console.log(e);
             });
-     }
+     },
    }
  }
 </script>

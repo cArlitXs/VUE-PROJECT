@@ -16,12 +16,30 @@
 
      -->
   <div>
-    <h3>Movies</h3>
-    {{item.data[0].prompt}}
-    <div v-if="item.data[3]">
-      {{item.data[3].prompt}}
+    <h1 id="tituloNel">Movies</h1>
+
+    <!-- <h4 class="text-warning">{{item.data[0].prompt}} :</h4>  {{item.data[0].value}} -->
+    <h2>{{item.data[0].value}}</h2>
+    
+    <div v-if="item.data[1]">
+      
+      <div class="row">
+        <div class="col-8">
+          <h5 class="text-warning">{{item.data[6].prompt}}</h5>
+          <div class="videoWrapper text-center"><iframe  class="col-12" :src="item.data[6].value" ></iframe></div>
+          <h4 class="text-warning">{{item.data[1].prompt}}</h4> {{item.data[1].value}}
+        </div>
+
+        <div class="col-4 divInfoNel">
+          <h4 class="text-warning">{{item.data[2].prompt}}</h4> {{item.data[2].value}}
+          <h4 class="text-warning">{{item.data[3].prompt}}</h4> {{item.data[3].value}}
+          <h4 class="text-warning">{{item.data[4].prompt}}</h4> {{item.data[4].value}}
+          <h4 class="text-warning">{{item.data[5].prompt}}</h4> {{item.data[5].value}}
+        </div>
+      </div>
+      
+      <!-- <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}} -->
     </div>
-    hola
 
   </div>
 
