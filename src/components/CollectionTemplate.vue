@@ -3,15 +3,15 @@
   <!-- How to bind form inputs to data: https://vuejs.org/v2/guide/forms.html -->
   <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
   <div class="container">
-    <h3>Template component</h3>
-    <div v-for="item in template.data">
-      <label>
-        {{item.prompt}}
-      </label>
-      <input v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'">
-      <textarea v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'"></textarea>
+    <div class="card p-2 m-2">
+      <h3>Template component</h3>
+      <div class="form-group row" v-for="item in template.data">
+        <label class="col-md-3">{{item.prompt}}: </label>
+        <input class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
+        <textarea class="form-control col-md-6" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt"></textarea>
+      </div>
+      <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
     </div>
-    <button class="btn btn-warning m-1" v-on:click="createItem(item)">Crear Nuevo</button>
   </div>
 </template>
 
