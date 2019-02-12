@@ -89,3 +89,8 @@ hr{
   border-radius: 20px;
   background-color: #ffc107;
 }
+#tituloNel{
+  text-align: center;
+}
+.divInfoNel{
+  margin-top: 100px;
