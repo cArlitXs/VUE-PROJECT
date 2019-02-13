@@ -37,17 +37,21 @@
 
     <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
-        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'">
-        </MoviesComponent>
+        <MoviesComponent :item="item" :template="collection.template" v-if="collection.type=='movie'"></MoviesComponent>
         <BookComponent :item="item" :template="collection.template" v-if="collection.type=='book'"></BookComponent>
         <TVSeriesComponent :item="item" :template="collection.template" v-if="collection.type=='tvseries'"></TVSeriesComponent>
         <MusicComponent :item="item" :template="collection.template" v-if="collection.type=='music'"></MusicComponent>
         <VideoGameComponent :item="item" :template="collection.template" v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
       <hr>
-      <button class="btn btn-warning m-1" v-on:click="deleteItem(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
-      <EditForm @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-warning m-1 btn-sm" v-on:click="deleteItem(item)" disabled>Borrar</button>
+          <button class="btn btn-secondary m-1 btn-sm" v-on:click="processLink(item, $event)">Detalles</button>
+          <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
+        </div>
+      </div>
+      <EditForm v-show="activo" @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
 
   </div>
@@ -72,6 +76,7 @@
    ],
    data: function() {
      return {
+       activo : false
      }
    },
    components: {
