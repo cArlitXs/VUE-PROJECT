@@ -48,12 +48,12 @@
         <div class="col-12">
           <button class="btn btn-warning m-1 btn-sm" v-on:click="deleteItem(item)" disabled>Borrar</button>
           <button class="btn btn-secondary m-1 btn-sm" v-on:click="processLink(item, $event)">Detalles</button>
-          <button v-if=item.data[1] class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
+          <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
         </div>
       </div>
       <EditForm v-show="activo" @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
-    
+
   </div>
 </template>
 

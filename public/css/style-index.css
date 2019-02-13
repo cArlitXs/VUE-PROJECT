@@ -31,7 +31,7 @@ canvas {
   transition: 0.2s;
 }
 .navbar-dark .navbar-nav .nav-link:hover{
-  background-color: rgba(255,255,255,1);
+  background-color: #ffc107;
   color: black;
   border-radius: 5px;
   transition: 0.2s;
@@ -87,7 +87,7 @@ hr{
 
 .css-scrollbar::-webkit-scrollbar-thumb {
   border-radius: 20px;
-  background-color: #ffc107;
+  background-color: /*#ffc107*/ rgba(65,65,65,1);
 }
 #tituloNel{
   text-align: center;
