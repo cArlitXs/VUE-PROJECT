@@ -15,15 +15,24 @@
        Listening to events: https://vuejs.org/v2/guide/events.html
 
      -->
-  <div class="container">
+  <div class="card">
     <h3>Edit Form component</h3>
-    <div v-for="item in editTemplate.data">
-      <label>
-      {{item.prompt}}
-      </label>
-      <input type="text" v-model="item.value">
-    </div>
-    <button class="btn btn-warning m-1" v-on:click="updateItem(item)">Editar</button>
+      <div class="form-group" v-for="item in editTemplate.data">
+        <div class="row">
+          <div class="col-md-3">
+            <label>{{item.prompt}}: </label>
+          </div>
+          <div class="col-md-6">
+            <input class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type!='textarea'" :placeholder="item.prompt">
+            <textarea class="form-control" v-model="item.value" :type="item.type" :name="item.name" v-if="item.type=='textarea'" :placeholder="item.prompt" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-12">
+          <button class="btn btn-info btn-sm" v-on:click="updateItem">Editar</button>
+        </div>
+      </div>
   </div>
 
 </template>
@@ -57,7 +66,8 @@
                {
                  name: field.name,
                  prompt: field.prompt,
-                 value: d.value
+                 value: d.value,
+                 type: field.type
                }
              )
            }
@@ -94,4 +104,3 @@
 <style scoped>
 
 </style>
-
