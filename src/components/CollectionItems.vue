@@ -46,6 +46,31 @@
       <hr>
       <div class="row">
         <div class="col-12">
+ <!-- Button trigger modal -->
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+  Borrar
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-dark" id="exampleModalLabel">Borrar elemento</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-dark">
+        ¿Quieres eliminarlo?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-danger" v-on:click="deleteItem(item)">Confirmar</button>
+      </div>
+    </div>
+  </div>
+</div>
           <button class="btn btn-warning m-1 btn-sm" v-on:click="deleteItem(item)" disabled>Borrar</button>
           <button class="btn btn-secondary m-1 btn-sm" v-on:click="processLink(item, $event)">Detalles</button>
           <button v-if=item.data[1] class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
