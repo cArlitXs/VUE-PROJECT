@@ -3,8 +3,8 @@
   <!-- How to bind form inputs to data: https://vuejs.org/v2/guide/forms.html -->
   <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
   <div class="container">
-    <div class="card p-2 m-2">
-      <h3>Template component</h3>
+    <button class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo">+</button>
+    <div v-show="activo" class="card p-2 m-2">
       <div class="form-group" v-for="item in template.data">
         <div class="row">
           <div class="col-md-3">
@@ -16,7 +16,6 @@
           </div>
         </div>
       </div>
-
       <div class="row">
         <div class="col-12">
           <button class="btn btn-success btn-sm" v-on:click="createItem(item)">Crear Nuevo</button>
@@ -40,7 +39,9 @@ export default {
     "template"
   ],
   data: function() {
-    return {};
+    return {
+      activo : false
+    };
   },
   components: {},
   methods: {
@@ -51,24 +52,21 @@ export default {
       // It must send the TEMPLATE object of the collection with the data filled by the user
       // http://amundsen.com/media-types/collection/examples/#ex-write
 
-      // Post to the collection url, available in this.createurl
-      // We send the 'template' prop, which is bound to the form
-      axios
-        .post(this.createurl, { template: this.template })
-        .then(
-          function(response) {
-            // Emit an event to read again the collection
-            // The App component will listen to the 'refresh' event and it will call the readCollection method
-            this.$emit("refresh", this.createurl);
-          }.bind(this)
-        )
-        .catch(e => {
-          // If error, display in console
-          console.log(e);
-        });
-    }
-  }
-};
+       // Post to the collection url, available in this.createurl
+       // We send the 'template' prop, which is bound to the form
+       axios.post(this.createurl, {template: this.template})
+            .then(function (response) {
+              // Emit an event to read again the collection
+              // The App component will listen to the 'refresh' event and it will call the readCollection method
+              this.$emit('refresh', this.createurl);
+            }.bind(this))
+            .catch(e => {
+              // If error, display in console
+              console.log(e);
+            });
+     }
+   }
+ }
 </script>
 
 <style scoped>
