@@ -18,16 +18,16 @@
   <div>
     <h1>{{item.data[0].value}}</h1>
     <div class="row">
-      <div class="col-lg-2 col-md-6 m-3">
+      <div class="col-lg-2 col-md-6">
         <p id="imgVG" v-if="item.data[4]"><img :src="item.data[4].value"></p>
       </div>
-      <div class="col-lg m-3">
+      <div class="col-lg">
         <div v-if="item.data[1]">
-          <p class="font-weight-bold text-warning">{{item.data[1].prompt}}:</p><p class="font-weight-light text-justify">{{item.data[1].value}}</p>
-          <p class="font-weight-bold text-warning">{{item.data[2].prompt}}:</p><p class="font-weight-light">{{item.data[2].value}}</p>
-          <p class="font-weight-bold text-warning">{{item.data[3].prompt}}:</p><p class="font-weight-light">{{item.data[3].value}}</p>
-          <p class="font-weight-bold text-warning">{{item.data[5].prompt}}:</p><p class="font-weight-light">{{item.data[5].value}}</p>
-          <p class="font-weight-bold text-warning">{{item.data[6].prompt}}:</p><div class="videoWrapper text-center"><iframe class="col-12" :src="item.data[6].value"></iframe></div>
+          <h5 class="font-weight-bold text-warning">{{item.data[1].prompt}}:</h5><p class="font-weight-light text-justify">{{item.data[1].value}}</p>
+          <h5 class="font-weight-bold text-warning">{{item.data[2].prompt}}:</h5><p class="font-weight-light">{{item.data[2].value}}</p>
+          <h5 class="font-weight-bold text-warning">{{item.data[3].prompt}}:</h5><p class="font-weight-light">{{item.data[3].value}}</p>
+          <h5 class="font-weight-bold text-warning">{{item.data[5].prompt}}:</h5><p class="font-weight-light">{{item.data[5].value}}</p>
+          <h5 class="font-weight-bold text-warning">{{item.data[6].prompt}}:</h5><div class="videoWrapper text-center"><iframe class="col-12" :src="item.data[6].value"></iframe></div>
         </div>
       </div>
     </div>
