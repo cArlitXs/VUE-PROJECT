@@ -3,8 +3,8 @@
   <!-- How to bind form inputs to data: https://vuejs.org/v2/guide/forms.html -->
   <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
   <div class="container">
-    <button class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo">+</button>
-    <div v-show="activo" class="card p-2 m-2">
+      <button class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo">+</button>
+      <div v-show="activo" class="card p-2 m-2">
       <div class="form-group" v-for="item in template.data">
         <div class="row">
           <div class="col-md-3">
