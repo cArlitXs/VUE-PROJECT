@@ -4,7 +4,7 @@
   <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
   <div class="container">
     <div class="card p-2 m-2">
-      <h3>Template component</h3>
+      <!--<h3>Template component</h3>-->
       <div class="form-group" v-for="item in template.data">
         <div class="row">
           <div class="col-md-3">
