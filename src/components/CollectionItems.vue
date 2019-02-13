@@ -45,8 +45,12 @@
         <VideoGameComponent :item="item" :template="collection.template" v-if="collection.type=='VideoGame'"></VideoGameComponent>
       </div>
       <hr>
-      <button class="btn btn-warning m-1" v-on:click="deleteItem(item)" disabled>Borrar</button>
-      <button class="btn btn-secondary m-1" v-on:click="processLink(item, $event)">Detalles</button>
+      <div class="row">
+        <div class="col-12">
+          <button class="btn btn-warning m-1 btn-sm" v-on:click="deleteItem(item)" disabled>Borrar</button>
+          <button class="btn btn-secondary m-1 btn-sm" v-on:click="processLink(item, $event)">Detalles</button>
+        </div>
+      </div>
       <EditForm @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
 
@@ -113,7 +117,7 @@
               // If error, display in console
               console.log(e);
             });
-     }
+     },
    }
  }
 </script>
