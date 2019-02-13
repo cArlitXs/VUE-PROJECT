@@ -15,9 +15,10 @@
        Listening to events: https://vuejs.org/v2/guide/events.html
 
      -->
+     
   <div>
-    <h3>Books</h3>
-    <div class="container">
+     <h1>{{item.data[0].value}}</h1>
+    <div class="container" v-if="item.data[1]">
       <div class="row">
           <div class="col">
              <h4 class="text-warning">{{item.data[4].prompt}} :</h4> <img :src="item.data[4].value" width="400px" height="500px">
