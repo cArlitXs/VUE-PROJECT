@@ -53,6 +53,7 @@
       </div>
       <EditForm v-show="activo" @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
     </div>
+    
   </div>
 </template>
 
