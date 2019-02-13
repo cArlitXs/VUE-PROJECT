@@ -19,7 +19,7 @@
   </main>
   <header>
     <!-- Display collection title -->
-    <h2 class="text-center">{{c.collection.title}}</h2>
+    <!--<h2 class="text-center">{{c.collection.title}}</h2>-->
   </header>
 </div>
 </template>
@@ -41,7 +41,19 @@ export default {
 	// The collection object is stored in "c"
   created: function() {
     // AJAX request to /api/ (entry point of the app)
-    this.readCollection('/api/');
+
+    /*var that = this;
+    window.onpopstate = function(event) {
+        var currentUrl = document.URL,
+        urlParts   = currentUrl.split('#')[1];
+        var urlinicio = urlParts ? urlParts: "/api";
+        that.readCollection(urlinicio);
+      };*/
+
+    var currentUrl = document.URL,
+    urlParts   = currentUrl.split('#')[1];
+    var urlinicio = urlParts ? urlParts: "/api";
+    this.readCollection(urlinicio);
   },
 
   // Component data
@@ -70,6 +82,7 @@ export default {
         .then(response => {
           // If success, store data returned by the server (the collection + JSON object) in the 'c' property of the component
           this.c = response.data;
+          history.pushState({}, url,"#" + url);
         })
         .catch(e => {
           // If error, display in console
