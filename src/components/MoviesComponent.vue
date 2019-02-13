@@ -16,12 +16,25 @@
 
      -->
   <div>
-    <div v-if=item.data[1]>
-      <p class="text-warning">Descripción:</p><p>{{item.data[1].value}}</p>
-      <p class="text-warning">Director:</p><p>{{item.data[2].value}}</p>
-      <p class="text-warning">Fecha de estreno:</p><p>{{item.data[3].value}}</p>
-      <p class="text-warning">Trailer:</p>
-      <iframe :src="item.data[4].value" frameborder="1"></iframe>
+    <h2 class="text-center">{{item.data[0].value}}</h2>
+    <div v-if=item.data[1] class="border-top border-warning">
+      <div class="col-sm text-center">
+        <p class="text-warning">Descripción:</p>
+        <p>{{item.data[1].value}}</p>
+      </div>
+      <div class="row">
+        <div class="col-sm text-right border-right border-warning mb-3">
+          <p class="text-warning">Director:</p>
+          <p>{{item.data[2].value}}</p>
+        </div>
+        <div class="col-sm border-left border-warning mb-3">
+          <p class="text-warning">Fecha de estreno:</p>
+          <p>{{item.data[3].value}}</p>
+        </div>
+      </div>
+      <div class="text-center videoWrapper">
+        <iframe class="col-12" :src="item.data[4].value"></iframe>
+      </div>
     </div>
   </div>
 
