@@ -35,16 +35,7 @@
           </div>
 
         </div>
-
-      <!-- <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
-      <p>{{item.data[1].value}}</p>
-      <p>{{item.data[2].prompt}}: <span class="font-weight-bold text-warning">{{item.data[2].value}} </span></p>
-       <p id="itemIMG" v-if="item.data[3]"><img :src="item.data[3].value"></p>
-      <p>Escuchala en directo:</p>
-      <iframe :src="item.data[4].value" frameborder="1"></iframe> -->
     </div>
-
-    
 
   </div>
 

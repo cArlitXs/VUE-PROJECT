@@ -16,7 +16,7 @@
 
      -->
   <div>
-    <h2 class="text-center">{{item.data[0].value}}</h2>
+    <h1 class="text-center text-warning">{{item.data[0].value}}</h1>
     <div v-if=item.data[1] class="border-top border-warning">
       <div class="col-sm text-center">
         <p class="text-warning">Descripción:</p>
