@@ -12,6 +12,12 @@
     <link rel="stylesheet" href="<%= BASE_URL %>css/style-index.css">
     <title>VUEMW</title>
     <script type="text/javascript">
+        window.onload = function(){
+          let contenedor = document.getElementById('content');
+          contenedor.style.visibility = 'hidden';
+          contenedor.style.transition = "all 0.5s";
+          contenedor.style.opacity = '0';
+        }
         window.onscroll = function () { myFunction() };
 
         function myFunction() {
@@ -23,6 +29,11 @@
     </script>
   </head>
   <body class="css-scrollbar"><!--id="particles-js"-->
+    <div id="content" class="text-center">
+      <div class="spinner-border text-warning" role="status">
+        <span class="sr-only">Cargando...</span>
+      </div>
+    </div>
     <div id="particles-js"></div>
     <div class="progress">
         <div class="progress-bar bg-warning" id="bar"></div>
