@@ -32,7 +32,8 @@
           <p>{{item.data[3].value}}</p>
         </div>
       </div>
-      <div class="text-center videoWrapper">
+      <!-- Trailer -->
+      <div class="videoWrapper">
         <iframe class="col-12" :src="item.data[4].value"></iframe>
       </div>
     </div>
