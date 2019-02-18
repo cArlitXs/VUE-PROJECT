@@ -19,18 +19,29 @@
      -->
   <div>
 
- 
-   <!--  <label><b>{{item.data[0].prompt}}:  {{item.data[0].value}}</b></label>
-    <label><b>{{item.data[1].prompt}}:  {{item.data[1].value}}</b></label> -->
+    <h1 class="font-weight-bold text-warning">{{item.data[0].value}}</h1>
+    <div v-if="item.data[1]">
+        <div class="row">
+          <div class="col-lg-6">
+            <p id="itemIMG" v-if="item.data[3]"><img :src="item.data[3].value" width="100%"></p>
+          </div>
 
-    <h1>{{item.data[0].value}}</h1>
-    <div v-if=item.data[1]>
-      <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
+          <div class="col-lg-6">
+            <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
+            <p>{{item.data[1].value}}</p>
+            <span class="font-weight-bold text-warning">{{item.data[2].prompt}}:</span> <span style="margin-left: 5px;">{{item.data[2].value}} </span>
+            <p class="font-weight-bold text-warning">Escuchala en directo:</p>
+            <iframe :src="item.data[4].value" frameborder="1" width="100%" height="200px"></iframe>
+          </div>
+
+        </div>
+
+      <!-- <p class="font-weight-bold text-warning">{{item.data[1].prompt}}</p>
       <p>{{item.data[1].value}}</p>
       <p>{{item.data[2].prompt}}: <span class="font-weight-bold text-warning">{{item.data[2].value}} </span></p>
        <p id="itemIMG" v-if="item.data[3]"><img :src="item.data[3].value"></p>
       <p>Escuchala en directo:</p>
-      <iframe :src="item.data[4].value" frameborder="1"></iframe>
+      <iframe :src="item.data[4].value" frameborder="1"></iframe> -->
     </div>
 
     

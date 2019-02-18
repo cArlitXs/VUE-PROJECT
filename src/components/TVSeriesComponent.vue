@@ -16,11 +16,10 @@
 
      -->
   <div>
-    <!-- <h4 class="text-warning">{{item.data[0].prompt}} :</h4>  {{item.data[0].value}} -->
-    <h2>{{item.data[0].value}}</h2>
+    
+    <h1 class="font-weight-bold text-warning">{{item.data[0].value}}</h1>
     
     <div v-if="item.data[1]">
-      
       <div class="row">
         <div class="col-lg-8">
           <h4 class="text-warning">Trailer</h4>
@@ -35,8 +34,7 @@
           <h4 class="text-warning">{{item.data[5].prompt}}</h4> {{item.data[5].value}}
         </div>
       </div>
-      
-      <!-- <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}} -->
+     
     </div>
 
   </div>
