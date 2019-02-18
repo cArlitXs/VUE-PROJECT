@@ -46,33 +46,28 @@
       <hr>
       <div class="row">
         <div class="col-12">
- <!-- Button trigger modal -->
-<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
-  Borrar
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-dark" id="exampleModalLabel">Borrar elemento</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
+        <!-- Button trigger modal -->
+        <button type="button"class="btn btn-warning m-1 btn-sm" data-toggle="modal" :data-target="'#' + item.href.replace(/\//g,'')">
+          Borrar
         </button>
-      </div>
-      <div class="modal-body text-dark">
-        ¿Quieres eliminarlo?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-danger" v-on:click="deleteItem(item)">Confirmar</button>
-      </div>
-    </div>
-  </div>
-</div>
-          <button class="btn btn-warning m-1 btn-sm" v-on:click="deleteItem(item)" disabled>Borrar</button>
-          <button class="btn btn-secondary m-1 btn-sm" v-on:click="processLink(item, $event)">Detalles</button>
+        <!-- Modal -->
+        <div class="modal fade" :id="item.href.replace(/\//g,'')" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header bg-dark">
+                <h5 class="modal-title" id="exampleModalLabel">Borrar elemento</h5>
+                <button type="button" class="close bg-danger" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true" style="color:white;">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body bg-dark">
+                ¿Quieres eliminarlo?
+                <p class="text-right"><button type="button" class="btn btn-danger" v-on:click="deleteItem(item)" data-dismiss="modal">Si</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <button class="btn btn-secondary m-1 btn-sm" v-if="collection.kind == 'collection'" v-on:click="processLink(item, $event)">Detalles</button>
           <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
         </div>
       </div>
