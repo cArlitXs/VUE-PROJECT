@@ -43,7 +43,20 @@ canvas {
 .card{
   background-color: rgba(0,0,0,0.5);
 }
-
+.modal-header, .modal-body, .modal-footer{
+  background-color: rgba(65,65,65,1) !important;
+  border: 0px solid black !important;
+}
+.modal-content{
+  border-radius: 20px !important;
+}
+.sinColor{
+  background-color: rgba(0,0,0,0) !important;
+  border: 0px solid black !important;
+}
+.close{
+  color: white !important;
+}
 .progress {
     position: fixed !important;
     width: 100%;
