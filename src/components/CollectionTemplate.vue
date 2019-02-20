@@ -27,7 +27,7 @@
   </div>-->
 
   <div class="container">
-    <button class="btn btn-secondary m-1 btn-sm" v-on:click="activo=!activo"  data-toggle="modal" data-target="#modalNew">+</button>
+    <button class="btn btn-secondary m-1 btn-sm"  data-toggle="modal" data-target="#modalNew">+</button>
     <div class="modal fade bd-example-modal-lg" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="modalNewLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -38,7 +38,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <div v-show="activo" class="card p-2 m-2 sinColor">
+            <div class="card p-2 m-2 sinColor">
               <div class="form-group" v-for="item in template.data">
                 <div class="row">
                   <div class="col-md-3">

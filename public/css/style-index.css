@@ -21,7 +21,7 @@ canvas {
 }
 
 #app{
-  color: white;
+  color: white; 
 }
 
 #content{
@@ -137,3 +137,4 @@ hr{
 }
 .divInfoNel{
   margin-top: 100px;
+}
