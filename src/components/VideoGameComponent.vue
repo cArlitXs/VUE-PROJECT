@@ -16,7 +16,7 @@
 
      -->
   <div>
-    <h1>{{item.data[0].value}}</h1>
+    <h1 class="text-warning">{{item.data[0].value}}</h1>
     <div class="row">
       <div class="col-lg-2 col-md-6">
         <p id="imgVG" v-if="item.data[4]"><img :src="item.data[4].value"></p>

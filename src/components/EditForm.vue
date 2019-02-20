@@ -16,7 +16,7 @@
 
      -->
   <div class="card">
-    <h3>Edit Form component</h3>
+    <!--<h3>Edit Form component</h3>-->
       <div class="form-group" v-for="item in editTemplate.data">
         <div class="row">
           <div class="col-md-3">
@@ -30,7 +30,7 @@
       </div>
     <div class="row">
       <div class="col-12">
-          <button class="btn btn-info btn-sm" v-on:click="updateItem">Editar</button>
+          <button class="btn btn-success btn" v-on:click="updateItem"><i class="fas fa-save"></i> Guardar</button>
         </div>
       </div>
   </div>

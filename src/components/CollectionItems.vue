@@ -48,7 +48,7 @@
         <div class="col-12">
         <!-- Button trigger modal -->
         <button type="button"class="btn btn-warning m-1 btn-sm" data-toggle="modal" :data-target="'#' + item.href.replace(/\//g,'')">
-          Borrar
+          <i class="fas fa-trash"></i> Borrar
         </button>
         <!-- Modal -->
         <div class="modal fade" :id="item.href.replace(/\//g,'')" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -61,14 +61,19 @@
                 </button>
               </div>
               <div class="modal-body bg-dark">
-                ¿Quieres eliminarlo?
-                <p class="text-right"><button type="button" class="btn btn-danger" v-on:click="deleteItem(item)" data-dismiss="modal">Si</button></p>
+                <p>
+                  ¿Desea borrarlo permamentemente?
+                </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Cerrar</button>
+                <button type="button" class="btn btn-danger" v-on:click="deleteItem(item)" data-dismiss="modal"><i class="fas fa-trash"></i> Borrar</button>
               </div>
             </div>
           </div>
         </div>
-          <button class="btn btn-secondary m-1 btn-sm" v-if="collection.kind == 'collection'" v-on:click="processLink(item, $event)">Detalles</button>
-          <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo">Editar</button>
+          <button class="btn btn-secondary m-1 btn-sm" v-if="collection.kind == 'collection'" v-on:click="processLink(item, $event)"><i class="fas fa-info-circle"></i> Detalles</button>
+          <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo"><i class="fas fa-edit"></i> Editar</button>
         </div>
       </div>
       <EditForm v-show="activo" @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
