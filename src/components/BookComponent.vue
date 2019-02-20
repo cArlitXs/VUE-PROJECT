@@ -17,7 +17,7 @@
      -->
      
   <div>
-     <h1>{{item.data[0].value}}</h1>
+     <h1 class="text-warning">{{item.data[0].value}}</h1>
     <div class="container" v-if="item.data[1]">
       <div class="row">
           <div class="col">
