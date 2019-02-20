@@ -23,6 +23,36 @@ canvas {
 #app{
   color: white;
 }
+
+#content{
+  display: block;
+  background: rgba(17, 17, 17,1);;
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  position: fixed;
+  z-index: 9999;
+  text-align: center;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.spinner-border{
+    display: block;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border: 0.5em solid #ffc107;
+    border-right-color: transparent;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+  }
 .navbar{
   background-color: rgba(0,0,0,0.5);
 }
