@@ -17,20 +17,20 @@
      -->
      
   <div>
-     <h1>{{item.data[0].value}}</h1>
+     <h1 class="font-weight-bold text-warning">{{item.data[0].value}}</h1>
     <div class="container" v-if="item.data[1]">
       <div class="row">
           <div class="col">
-             <h4 class="text-warning">{{item.data[4].prompt}} :</h4> <img :src="item.data[4].value" width="400px" height="500px">
+             <h4 class="font-weight-bold text-warning">{{item.data[4].prompt}} :</h4> <img :src="item.data[4].value" width="400px" height="500px">
           </div>
           <div class="col">
-              <h4 class="text-warning">{{item.data[0].prompt}} :</h4> {{item.data[0].value}}
+              <h4 class="font-weight-bold text-warning">{{item.data[0].prompt}} :</h4> {{item.data[0].value}}
 
-              <h4 class="text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}}
+              <h4 class="font-weight-bold text-warning">{{item.data[1].prompt}} :</h4> {{item.data[1].value}}
               <br>
-              <h4 class="text-warning">{{item.data[2].prompt}} :</h4> {{item.data[2].value}}
+              <h4 class="font-weight-bold text-warning">{{item.data[2].prompt}} :</h4> {{item.data[2].value}}
               <br>
-              <h4 class="text-warning">{{item.data[3].prompt}} :</h4>  {{item.data[3].value}}
+              <h4 class="font-weight-bold text-warning">{{item.data[3].prompt}} :</h4>  {{item.data[3].value}}
               <br>
           </div>
       </div>
