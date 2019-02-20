@@ -47,7 +47,7 @@
       <div class="row">
         <div class="col-12">
         <!-- Button trigger modal -->
-        <button type="button"class="btn btn-warning m-1 btn-sm" data-toggle="modal" :data-target="'#' + item.href.replace(/\//g,'')">
+        <button type="button"class="btn btn-warning m-1" data-toggle="modal" :data-target="'#' + item.href.replace(/\//g,'')">
           <i class="fas fa-trash"></i> Borrar
         </button>
         <!-- Modal -->
@@ -72,8 +72,8 @@
             </div>
           </div>
         </div>
-          <button class="btn btn-secondary m-1 btn-sm" v-if="collection.kind == 'collection'" v-on:click="processLink(item, $event)"><i class="fas fa-info-circle"></i> Detalles</button>
-          <button v-if="item.data[1]" class="btn btn-info m-1 btn-sm" v-on:click="activo=!activo"><i class="fas fa-edit"></i> Editar</button>
+          <button class="btn btn-secondary m-1" v-if="collection.kind == 'collection'" v-on:click="processLink(item, $event)"><i class="fas fa-info-circle"></i> Detalles</button>
+          <button v-if="item.data[1]" class="btn btn-info m-1" v-on:click="activo=!activo"><i class="fas fa-edit"></i> Editar</button>
         </div>
       </div>
       <EditForm v-show="activo" @refresh="refresh" :template="collection.template" :item="item" v-if="item.data[1]"></EditForm>
