@@ -27,7 +27,9 @@
   </div>-->
 
   <div class="container">
-    <button class="btn btn-secondary m-1 btn-sm"  data-toggle="modal" data-target="#modalNew">+</button>
+    <!--<button class="btn btn-secondary m-1 btn-sm"  data-toggle="modal" data-target="#modalNew">+</button>-->
+    <!---->
+    <button class="btn" id="botonAdd" data-toggle="modal" data-target="#modalNew"><i class="fas fa-plus"></i></button>
     <div class="modal fade bd-example-modal-lg" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="modalNewLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -53,8 +55,8 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button class="btn btn-success btn-md" v-on:click="createItem(item)">Crear Nuevo</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal"><i class="fas fa-times"></i> Cerrar</button>
+            <button class="btn btn-success btn-md" v-on:click="createItem(item)"><i class="fas fa-plus"></i> Crear Nuevo</button>
           </div>
         </div>
       </div>
