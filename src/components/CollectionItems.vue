@@ -34,6 +34,111 @@
     <!-- Listening to events: https://vuejs.org/v2/guide/events.html -->
 
     <!-- Props: https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
+    <div v-if="collection.type == 'index'">
+      <div class="jumbotron jumbotron-fluid card">
+        <div class="container">
+          <h1 class="display-4">VUEMW</h1>
+          <p class="lead">Proyecto hecho en VUE.JS</p>
+        </div>
+      </div>
+
+      <!--Pablo-->
+      <div class="row">
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Pablo Server</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
+              <p class="card-text">Me gustan las patatas con olor a queso</p>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/server14049" class="btn btn-outline-info col-12">GitHub</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="btn btn-outline-warning col-12">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Carlos-->
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Carlos Alvarez L.</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Diseñador</h6>
+              <p class="card-text">Tengo un chucho que te arranca la cabeza si te pones subnormal</p>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/cArlitXs" class="btn btn-outline-info col-12">GitHub</a>
+                </div>
+                <div class="col-6">
+                  <a href="mailto:carlitosalvarezlinares@gmail.com" class="btn btn-outline-warning col-12">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Nico-->
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Nicolás Viñals</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
+              <p class="card-text">Descripción</p>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="btn btn-outline-warning col-12">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Nelson-->
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Nelson Ramos</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
+              <p class="card-text">Descripción</p>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="btn btn-outline-warning col-12">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Angel-->
+        <div class="col-md-4 p-1">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Ángel Cava</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
+              <p class="card-text">Descripción</p>
+              <div class="row">
+                <div class="col-6">
+                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                </div>
+                <div class="col-6">
+                  <a href="#" class="btn btn-outline-warning col-12">Email</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div v-for="item in collection.items" class="card p-2 m-2">
       <div>
