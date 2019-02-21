@@ -29,7 +29,7 @@
   <div class="container">
     <!--<button class="btn btn-secondary m-1 btn-sm"  data-toggle="modal" data-target="#modalNew">+</button>-->
     <!---->
-    <button class="btn" id="botonAdd" data-toggle="modal" data-target="#modalNew"><i class="fas fa-plus"></i></button>
+    <button class="btn" id="botonAdd" data-toggle="modal" data-target="#modalNew" v-if="kind == 'collection'"><i class="fas fa-plus"></i></button>
     <div class="modal fade bd-example-modal-lg" id="modalNew" tabindex="-1" role="dialog" aria-labelledby="modalNewLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -75,7 +75,8 @@ export default {
     // This prop stores the collection.href property
     "createurl",
     // This prop stores the collection.template object
-    "template"
+    "template",
+    "kind"
   ],
   data: function() {
     return {

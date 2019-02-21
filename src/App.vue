@@ -14,7 +14,7 @@
     <!-- Template Container -->
     <!-- We pass collection.href and collection.template to the component -->
     <!-- https://vuejs.org/v2/guide/components.html#Dynamic-Props -->
-    <CollectionTemplate :createurl="c.collection.href" :template="c.collection.template" @refresh="readCollection"></CollectionTemplate>
+    <CollectionTemplate :kind="c.collection.kind" :createurl="c.collection.href" :template="c.collection.template" @refresh="readCollection"></CollectionTemplate>
 
   </main>
   <header>
