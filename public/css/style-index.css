@@ -40,6 +40,10 @@ canvas {
   -o-transition: opacity 1s ease;
   transition: opacity 1s ease;
 }
+.logoJumbo{
+  width: 50px;
+  height: auto;
+}
 .spinner-border{
     display: block;
     width: 5rem;
