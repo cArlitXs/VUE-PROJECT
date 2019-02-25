@@ -85,15 +85,15 @@
         <div class="col-md-4 p-1">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Nicolás Viñals</h5>
+              <h5 class="card-title">M. Nicolás Viñals C.</h5>
               <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
-              <p class="card-text">Descripción</p>
+              <p class="card-text">Demasiadas lagunas en este cursos, aun que solventadas todas.</p>
               <div class="row">
                 <div class="col-6">
-                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                  <a href="https://github.com/nubfragger" class="btn btn-outline-info col-12">GitHub</a>
                 </div>
                 <div class="col-6">
-                  <a href="#" class="btn btn-outline-warning col-12">Email</a>
+                  <a href="mailto:marcosnicovi@gmail.com" class="btn btn-outline-warning col-12">Email</a>
                 </div>
               </div>
             </div>
@@ -109,7 +109,7 @@
               <p class="card-text">Descripción</p>
               <div class="row">
                 <div class="col-6">
-                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                  <a href="https://github.com/NelsonRg2" class="btn btn-outline-info col-12">GitHub</a>
                 </div>
                 <div class="col-6">
                   <a href="#" class="btn btn-outline-warning col-12">Email</a>
@@ -125,10 +125,10 @@
             <div class="card-body">
               <h5 class="card-title">Ángel Cava</h5>
               <h6 class="card-subtitle mb-2 text-muted">Programador</h6>
-              <p class="card-text">Descripción</p>
+              <p class="card-text">Se meten conmigo por ser el más bajito</p>
               <div class="row">
                 <div class="col-6">
-                  <a href="https://github.com/" class="btn btn-outline-info col-12">GitHub</a>
+                  <a href="https://github.com/cava17722" class="btn btn-outline-info col-12">GitHub</a>
                 </div>
                 <div class="col-6">
                   <a href="#" class="btn btn-outline-warning col-12">Email</a>
